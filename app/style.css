@@ -1,0 +1,45 @@
+/* Pakistan in Numbers — original design. Deep teal + amber on warm paper white. */
+:root { --teal: #0e4f4a; --teal-dark: #083632; --amber: #d98a1f; --ink: #1c2422; --muted: #5a6b68; --line: #d8e0de; --paper: #f7f5ef; --card: #ffffff; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Georgia, "Times New Roman", serif; color: var(--ink); background: var(--paper); line-height: 1.55; }
+.top { background: var(--teal-dark); color: #fff; padding: 14px 22px; display: flex; flex-wrap: wrap; gap: 8px 26px; align-items: baseline; }
+.brand { color: #fff; font-size: 1.45rem; font-weight: bold; text-decoration: none; letter-spacing: .2px; }
+nav a { color: #cfe3de; text-decoration: none; margin-right: 16px; font-family: system-ui, sans-serif; font-size: .95rem; }
+nav a:hover, nav a:focus { color: #fff; text-decoration: underline; }
+main { max-width: 1060px; margin: 0 auto; padding: 22px 20px 40px; }
+footer { max-width: 1060px; margin: 0 auto; padding: 0 20px 30px; color: var(--muted); font-size: .9rem; }
+h1 { font-size: 2rem; margin: .2em 0 .3em; color: var(--teal-dark); }
+h2 { font-size: 1.35rem; color: var(--teal); border-bottom: 2px solid var(--amber); padding-bottom: 4px; margin-top: 1.6em; }
+h3 { color: var(--teal-dark); margin-bottom: .3em; }
+p.lede { font-size: 1.12rem; color: #33413e; max-width: 62ch; }
+a { color: var(--teal); }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 18px 0; }
+.kpi { background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--amber); padding: 12px 14px; }
+.kpi b { display: block; font-size: 1.7rem; color: var(--teal-dark); font-family: system-ui, sans-serif; }
+.kpi span { font-size: .92rem; color: var(--muted); }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.card { background: var(--card); border: 1px solid var(--line); padding: 14px 16px; }
+.card h3 { margin-top: 0; }
+.card h3 a { text-decoration: none; }
+table { border-collapse: collapse; width: 100%; background: var(--card); font-family: system-ui, sans-serif; font-size: .95rem; }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; }
+th { background: var(--teal); color: #fff; }
+th button { background: none; border: 0; color: #fff; font: inherit; cursor: pointer; padding: 0; text-align: left; }
+tr:nth-child(even) td { background: #f2f6f5; }
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+.bar-row { display: grid; grid-template-columns: 170px 1fr 74px; gap: 10px; align-items: center; margin: 7px 0; font-family: system-ui, sans-serif; font-size: .93rem; }
+.bar-track { background: #e6ebe9; height: 18px; }
+.bar-fill { background: var(--teal); height: 18px; }
+.bar-fill.amber { background: var(--amber); }
+.toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 14px 0; font-family: system-ui, sans-serif; }
+.toolbar input[type="search"] { padding: 8px 10px; font-size: 1rem; border: 1px solid var(--muted); min-width: 260px; }
+.toolbar label { font-weight: bold; }
+.note { background: #fdf3dd; border-left: 4px solid var(--amber); padding: 10px 14px; margin: 16px 0; }
+.src { font-size: .88rem; color: var(--muted); }
+ul.tight li { margin-bottom: 6px; }
+@media (max-width: 640px) {
+  h1 { font-size: 1.55rem; }
+  .bar-row { grid-template-columns: 110px 1fr 60px; font-size: .85rem; }
+  nav a { margin-right: 10px; }
+  th, td { padding: 6px; font-size: .88rem; }
+}
